@@ -3,10 +3,10 @@ const app = express()
 const port = 5000;
 
 let sendEvil = (req, res) => {
-    res.send("alert(233)");
+    res.send("<script>alert(233)</script>");
 }
 
-app.get('/', sendEvil)
+app.get('/', sendEvil);
 
 // app.get('/evil.html', sendEvil)
 
