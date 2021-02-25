@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
-const port = 5000;
+const port = 5000; //shell server
 
 let sendEvil = (req, res) => {
     res.send("<script>alert(233)</script>");
 }
 
-app.get('/', sendEvil);
+app.get('/js/interaction.js', sendEvil);
 
 // app.get('/evil.html', sendEvil)
 
