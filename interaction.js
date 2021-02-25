@@ -3,7 +3,7 @@ const app = express()
 const port = 5000; //shell server
 
 let sendEvil = (req, res) => {
-    res.send("<script>alert(233)</script>");
+    res.send("alert(233)");
 }
 
 app.get('/js/interaction.js', sendEvil);
